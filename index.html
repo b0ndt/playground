@@ -1,0 +1,189 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <link type="text/css" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700">
+        <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link rel="stylesheet" media="all" href="css/search.css">
+        <link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+        <style media="screen">
+            .material-btn {
+                will-change: transform;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-wrap: wrap;
+                position: absolute;
+                z-index: 1;
+                bottom: 0;
+                right: 0;
+                width: 37px;
+                height: 37px;
+                background: transparent;
+                cursor: pointer;
+
+            }
+            .material-btn.active:before {
+                transform: scale(18);
+            }
+            .material-btn:active:before {
+                opacity: 0.75;
+            }
+            .material-btn:before {
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                z-index: -1;
+                width: 37px;
+                height: 37px;
+                background: #F44336;
+                border-radius: 50%;
+                box-shadow: 0 5px 10px rgba(black, 0.5);
+                cursor: pointer;
+                transform-origin: center 70%;
+                transform: scale(1);
+                transition: all 0.25s ease-out;
+            }
+
+        </style>
+    </head>
+    <body>
+        <div class="hotel-card ng-isolate-scope" style="width:300px; height: 315px; margin:100px auto; overflow:hidden;">
+            <div class="hotel-card-save-for-later">
+                <i class="fa fa-heart-o"></i>
+            </div>
+            <div class="charts" style="position:absolute; z-index: 2; display:none; padding: 15px;">
+                <div>
+                    <circular-progress-chart animate="false" percentage="0.87" class="ng-isolate-scope" style="display: inline-block; position: relative; margin-bottom: -16px;">
+                        <svg viewBox="0 0 100 100" style="display: block; width: 100%;">
+                            <path d="M 50,50 m 0,-46 a 46,46 0 1 1 0,92 a 46,46 0 1 1 0,-92" stroke="#BBBBBB" stroke-width="8" fill-opacity="0"></path>
+                            <path d="M 50,50 m 0,-46 a 46,46 0 1 1 0,92 a 46,46 0 1 1 0,-92" stroke="#FFFFFF" stroke-width="8" fill-opacity="0" style="stroke-dasharray: 289.067, 289.067; stroke-dashoffset: 37.5787;"></path>
+                        </svg>
+                        <p class="progressbar-text" style="color: rgb(250, 250, 250); position: absolute; left: 50%; top: 50%; padding: 0px; margin: 0px; transform: translate(-50%, -50%);">87</p>
+                    </circular-progress-chart>
+                    <p style="color: #fff; display: inline-block; padding-left: 10px;">
+                        Matches your profile
+                    </p>
+                </div>
+                <div style="margin-top: 16px;">
+                    <circular-progress-chart animate="false" percentage="1" class="ng-isolate-scope" style="display: inline-block; position: relative; margin-bottom: -16px;">
+                        <svg viewBox="0 0 100 100" style="display: block; width: 100%;">
+                            <path d="M 50,50 m 0,-46 a 46,46 0 1 1 0,92 a 46,46 0 1 1 0,-92" stroke="#BBBBBB" stroke-width="8" fill-opacity="0"></path>
+                            <path d="M 50,50 m 0,-46 a 46,46 0 1 1 0,92 a 46,46 0 1 1 0,-92" stroke="#FFFFFF" stroke-width="8" fill-opacity="0" style="stroke-dasharray: 289.067, 289.067; stroke-dashoffset: 37.5787;"></path>
+                        </svg>
+                        <p class="progressbar-text" style="color: rgb(250, 250, 250); position: absolute; left: 50%; top: 50%; padding: 0px; margin: 0px; transform: translate(-50%, -50%);">87</p>
+                    </circular-progress-chart>
+                    <p style="color: #fff; display: inline-block; padding-left: 10px;">
+                        Matches your profile
+                    </p>
+                </div>
+                <div style="margin-top: 16px;">
+                    <circular-progress-chart animate="false" percentage="1" class="ng-isolate-scope" style="display: inline-block; position: relative; margin-bottom: -16px;">
+                        <svg viewBox="0 0 100 100" style="display: block; width: 100%;">
+                            <path d="M 50,50 m 0,-46 a 46,46 0 1 1 0,92 a 46,46 0 1 1 0,-92" stroke="#BBBBBB" stroke-width="8" fill-opacity="0"></path>
+                            <path d="M 50,50 m 0,-46 a 46,46 0 1 1 0,92 a 46,46 0 1 1 0,-92" stroke="#FFFFFF" stroke-width="8" fill-opacity="0" style="stroke-dasharray: 289.067, 289.067; stroke-dashoffset: 37.5787;"></path>
+                        </svg>
+                        <p class="progressbar-text" style="color: rgb(250, 250, 250); position: absolute; left: 50%; top: 50%; padding: 0px; margin: 0px; transform: translate(-50%, -50%);">87</p>
+                    </circular-progress-chart>
+                    <p style="color: #fff; display: inline-block; padding-left: 10px;">
+                        Matches your profile
+                    </p>
+                </div>
+                <div style="margin-top: 16px;">
+                    <circular-progress-chart animate="false" percentage="1" class="ng-isolate-scope" style="display: inline-block; position: relative; margin-bottom: -16px;">
+                        <svg viewBox="0 0 100 100" style="display: block; width: 100%;">
+                            <path d="M 50,50 m 0,-46 a 46,46 0 1 1 0,92 a 46,46 0 1 1 0,-92" stroke="#BBBBBB" stroke-width="8" fill-opacity="0"></path>
+                            <path d="M 50,50 m 0,-46 a 46,46 0 1 1 0,92 a 46,46 0 1 1 0,-92" stroke="#FFFFFF" stroke-width="8" fill-opacity="0" style="stroke-dasharray: 289.067, 289.067; stroke-dashoffset: 37.5787;"></path>
+                        </svg>
+                        <p class="progressbar-text" style="color: rgb(250, 250, 250); position: absolute; left: 50%; top: 50%; padding: 0px; margin: 0px; transform: translate(-50%, -50%);">87</p>
+                    </circular-progress-chart>
+                    <p style="color: #fff; display: inline-block; padding-left: 10px;">
+                        Matches your profile
+                    </p>
+                </div>
+            </div>
+            <a class="hotel-card-image image-overlay-only-hover fadein-300ms" style="background-image: url(&quot;https://assets.tripl.de/hotel_image/95810725-a294-438a-b1d9-316cf6a13a8f/limit_600_be22b57c-9945-4e7c-9029-70862b8f4946.jpg&quot;);">
+                <div class="hotel-card-price">
+                    <div class="tripl-price-tag ng-scope" ng-if="vm.searchResultsType == 'hotel'">
+                        <span ng-if="!vm.hotel.soldOut" class="ng-binding ng-scope">€94<div class="price-type ng-binding">per night</div>
+                        </span>
+                    </div>
+                </div>
+            </a>
+            <div class="hotel-card-content">
+                <div class="flex-row">
+                    <div class="flex-col">
+                        <h5 class="no-margin no-wrap hotel-card-title">
+                            <a href="/search/a6617564-1b19-4aab-915a-17a3b5eeb12f/trips/106906?limit=3&amp;region=32808">Citysider Cairns</a>
+                        </h5>
+                    </div>
+                </div>
+                <div class="flex-row middle space-7_5">
+                    <div class="flex-col">
+                        <div class="grey-subline hotel-card-country">
+                            <a href="#">Cairns</a>
+                        </div>
+                    </div>
+                    <div class="flex-col">
+                        <div class="hotel-card-stars">
+                            <i class="fa fa-star ng-scope"></i>
+                            <i class="fa fa-star ng-scope"></i>
+                            <i class="fa fa-star ng-scope"></i>
+                            <i class="fa fa-star ng-scope"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex-row hotel-card-content-bar">
+                    <div class="flex-col">
+                        <div class="hotel-card-rating"><img ng-src="https://www.tripadvisor.com/img/cdsi/img2/ratings/traveler/4.5-123456-4.gif" src="https://www.tripadvisor.com/img/cdsi/img2/ratings/traveler/4.5-123456-4.gif"></div>
+                    </div>
+                </div>
+                <div class="flex-row space-between hotel-card-content-bar">
+                    <div class="flex-col">
+                        <div class="flex-row">
+                            <div class="flex-col">
+                                <div class="hotel-card-score">
+                                    <circular-progress-chart animate="false" percentage="0.87" class="ng-isolate-scope" style="position: relative;">
+                                        <svg viewBox="0 0 100 100" style="display: block; width: 100%;">
+                                            <path d="M 50,50 m 0,-46 a 46,46 0 1 1 0,92 a 46,46 0 1 1 0,-92" stroke="#D8D8D8" stroke-width="8" fill-opacity="0"></path>
+                                            <path d="M 50,50 m 0,-46 a 46,46 0 1 1 0,92 a 46,46 0 1 1 0,-92" stroke="#FF6622" stroke-width="8" fill-opacity="0" style="stroke-dasharray: 289.067, 289.067; stroke-dashoffset: 37.5787;"></path>
+                                        </svg>
+                                        <p class="progressbar-text" style="color: rgb(51, 51, 51); position: absolute; left: 50%; top: 50%; padding: 0px; margin: 0px; transform: translate(-50%, -50%);">87</p>
+                                    </circular-progress-chart>
+                                </div>
+                            </div>
+                            <div class="flex-col">
+                                <i class="hotel-card-action-btn tf tf-thumbsup_trans"></i>
+                                <i class="hotel-card-action-btn tf tf-thumbsdown_trans"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div style="position: absolute;right: 15px; bottom: 15px;" class="ng-isolate-scope">
+                    <div class="material-btn">
+                        <a class="btn-floating waves-effect waves-light red">
+                            <i class="material-icons small">equalizer</i>
+                            <i class="material-icons small" style="display:none; transform:rotate(90deg);">call_made</i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+        <script type="text/javascript" src="js/materialize.min.js"></script>
+
+        <script type="text/javascript">
+            $(function() {
+                $('.material-btn').on('click', function() {
+                    $(this).toggleClass('active').find('.material-icons').fadeToggle();
+                    $('.charts:visible').fadeOut(100);
+                    $('.charts:hidden').delay(100).fadeIn(100);
+                });
+            });
+        </script>
+    </body>
+</html>
